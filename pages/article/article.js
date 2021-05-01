@@ -191,7 +191,7 @@ Page({
   // 发送评论按钮点击
   handleCommentSend: function (e) {
     // 如果内容为空，则不发起请求
-    if (this.data.wordInput == '') {
+    if (this.data.commentInput == '') {
       return wx.showToast({
         title: '评论不能为空',
         icon: 'error'
@@ -225,7 +225,7 @@ Page({
           }
         }).then((res) => {
           wx.showToast({
-            title: '留言成功',
+            title: '评论成功',
             icon: 'success'
           })
           this.setData({
@@ -250,7 +250,7 @@ Page({
         }
       }).then((res) => {
         wx.showToast({
-          title: '留言成功',
+          title: '评论成功',
           icon: 'success'
         })
         this.setData({
