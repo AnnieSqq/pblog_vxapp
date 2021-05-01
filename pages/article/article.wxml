@@ -1,0 +1,41 @@
+<!-- pages/article/article.wxml -->
+<!-- 文章标题 -->
+<view class="article_title">
+    <view style="margin:0 20rpx 0 20rpx">{{articleData.title}}</view>
+</view>
+<!-- 文章标题占位 -->
+<view class="article_title_holder"></view>
+<!-- markdown渲染组件 -->
+<towxml nodes="{{article}}"></towxml>
+<!-- 回到顶/底部 -->
+<image class="move up" src="/images/up.png" bindtap="handleUpTap"></image>
+<image class="move down" src="/images/down.png" bindtap="handleDownTap"></image>
+<!-- 点赞收藏 -->
+<view class="interact_row">
+    <image class="interact_icon" src="/images/like.png" bindtap="handleLike"></image>
+    <text class="interact_text" bindtap="handleLike">点赞</text>
+    <image class="interact_icon" src="/images/collect.png" bindtap="handleCollect"></image>
+    <text class="interact_text" bindtap="handleCollect">收藏</text>
+</view>
+<!-- 评论 -->
+<view class="comment_box">
+    <view>评论</view>
+    <!-- 评论列表 -->
+    <view class="comment_list">
+        <text wx:if="{{commentList.length==0}}" style="color: #bfbfbf">暂无评论</text>
+        <view wx:for="{{commentList}}" wx:key="id">
+            <view style="font-size:xx-small">
+                <text>{{item.visitor_name}} </text>
+                <text>{{item.release_time}}</text>
+            </view>
+            <view>{{item.content}}</view>
+        </view>
+    </view>
+</view>
+<!-- 评论输入框固定栏 -->
+<view class="comment_fixed">
+    <image class="comment_send" src="/images/comment.png"></image>
+    <input type="text" value="{{commentInput}}" class="comment_input" bindinput="handleCommentInput" />
+    <image class="comment_send" src="/images/comment_send.png" bindtap="handleCommentSend"></image>
+</view>
+<view id="foot_bottom"></view>

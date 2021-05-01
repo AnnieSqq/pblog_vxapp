@@ -1,0 +1,35 @@
+/* pages/words/words.wxss */
+/* 固定评论行 */
+.word_fixed {
+  position: fixed;
+  height: 98rpx;
+  width: 100%;
+  box-shadow: 0rpx -5rpx 25rpx #bfbfbf;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 评论输入框 */
+.word_input {
+  height: 40rpx;
+  width: 550rpx;
+  background-color: #d9d9f3;
+  border-radius: 20rpx;
+  margin: 0 20rpx;
+}
+/* 评论发布图标按钮 */
+.word_send {
+  width: 60rpx;
+  height: 60rpx;
+}
+/* 输入栏占位 */
+.word_input_holder {
+  height: 98rpx;
+}
+/* 评论列表区域 */
+.word_list {
+  background-color: #f2f4f6;
+  margin: 26rpx 0;
+  padding: 26rpx;
+}

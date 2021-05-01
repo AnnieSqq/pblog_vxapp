@@ -1,23 +1,25 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<!-- index.wxml -->
+<!-- 搜索栏 -->
+<view class="search_box">
+  <image class="avatar" src="/images/flower.png"></image>
+  <input class="search_input" type="text" bindinput="handleSearchInput" />
+  <image class="search_icon" src="/images/search.png" bindtap="handleSearchTap"></image>
+</view>
+<!-- 搜索栏占位 -->
+<view class="search_box_holder"></view>
+<!-- 主体 -->
+<view class="category_box" wx:for="{{categoryList}}" wx:key="id" wx:for-item="category">
+  <!-- 分类 -->
+  <view class="category_name">{{category.category}}</view>
+  <!-- 文章卡片 -->
+  <view bindtap="handleArticleTap" data-articleid="{{article.id}}" class="article_card" hover-class="article_card_hover" wx:for="{{category.data}}" wx:key="id" wx:for-item="article">
+    <view class="article_title">{{article.title}}</view>
+    <view class="article_info">
+      <text>{{article.reader_num}}人次看过</text>
+      <text>{{article.like_num}}人点赞</text>
+      <text>{{article.collect_num}}人收藏</text>
+      <text>{{article.comment_num}}条评论</text>
+    </view>
+    <view class="article_info">{{article.release_time}}</view>
   </view>
 </view>

@@ -1,13 +1,35 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
+    "pages/article/article",
+    "pages/words/words",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#d9d9f3",
+    "navigationBarTitleText": "Pblog",
+    "enablePullDownRefresh": true,
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#ceefe4"
+  },
+  "tabBar": {
+    "color": "#dfdfdf",
+    "selectedColor": "#d9d9f3",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./icons/_首页.png",
+        "selectedIconPath": "./icons/首页.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/words/words",
+        "iconPath": "./icons/_留言.png",
+        "selectedIconPath": "./icons/留言.png",
+        "text": "留言"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

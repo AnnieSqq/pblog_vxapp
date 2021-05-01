@@ -1,19 +1,64 @@
 /**index.wxss**/
-.userinfo {
+/* 搜索栏 */
+.search_box {
+  position: fixed;
+  width: 100%;
+  height: 98rpx;
+  box-shadow: 0rpx 5rpx 25rpx #bfbfbf;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  color: #aaa;
 }
-
-.userinfo-avatar {
+/* 搜索栏占位 */
+.search_box_holder {
+  height: 80rpx;
+}
+/* 头像 */
+.avatar {
+  width: 80rpx;
+  height: 72rpx;
+}
+/* 搜索图标 */
+.search_icon {
+  width: 60rpx;
+  height: 60rpx;
+}
+/* 搜索输入框 */
+.search_input {
+  background-color: #d9d9f3;
+  width: 550rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  margin: 0 10rpx 0 30rpx;
+}
+/* 分类框 */
+.category_box {
+  margin: 26rpx 0;
+}
+/* 文章卡片 */
+.article_card {
+  background-color: #f2f2f2;
+  margin: 26rpx auto;
+  height: 120rpx;
+  width: 670rpx;
+  box-shadow: 0rpx 10rpx 20rpx #bfbfbf;
+  padding: 20rpx;
+}
+.article_card_hover {
+  background-color: #d9d9f3;
+  box-shadow: 0rpx 10rpx 20rpx #d9d9f3;
+}
+/* 文章标题 */
+.article_title {
   overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-
-.usermotto {
-  margin-top: 200px;
+/* 文章信息 */
+.article_info {
+  font-size: smaller;
+  font-size: xx-small;
+  color: #bfbfbf;
+  margin-top: 8rpx;
 }

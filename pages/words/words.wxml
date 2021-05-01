@@ -1,0 +1,20 @@
+<!-- pages/words/words.wxml -->
+<!-- 留言输入框固定栏 -->
+<view class="word_fixed">
+    <image class="word_send" src="/images/comment.png"></image>
+    <input type="text" value="{{wordInput}}" class="word_input" bindinput="handleWordInput" />
+    <image class="word_send" src="/images/comment_send.png" bindtap="handleWordSend"></image>
+</view>
+<!-- 输入栏占位 -->
+<view class="word_input_holder"></view>
+<!-- 评论列表 -->
+    <view class="word_list">
+        <text wx:if="{{wordList.length==0}}" style="color: #bfbfbf">暂无留言</text>
+        <view wx:for="{{wordList}}" wx:key="id">
+            <view style="font-size:xx-small">
+                <text>{{item.visitor_name}} </text>
+                <text>{{item.release_time}}</text>
+            </view>
+            <view>{{item.content}}</view>
+        </view>
+    </view>

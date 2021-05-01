@@ -1,0 +1,84 @@
+/* pages/article/article.wxss */
+/* 文章规定标题 */
+.article_title {
+  position: fixed;
+  width: 100%;
+  /* 去掉固定高度，高度随文本行数变化 */
+  /* height: 98rpx; */
+  box-shadow: 0rpx 5rpx 25rpx #bfbfbf;
+  background-color: #ffffff;
+  padding: 20rpx 0;
+}
+/* 标题占位 */
+.article_title_holder {
+  width: 100%;
+  height: 98rpx;
+}
+/* 回到顶/底部按钮 */
+.move {
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
+  right: 30rpx;
+  border-radius: 50%;
+}
+.up {
+  bottom: 200rpx;
+}
+.down {
+  bottom: 100rpx;
+}
+/* 点赞/收藏行 */
+.interact_row {
+  margin: 40rpx;
+}
+.interact_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.interact_text {
+  font-size: xx-small;
+  color: #bfbfbf;
+}
+/* 评论区域 */
+.comment_box {
+  margin: 40rpx;
+}
+.comment_list {
+  /* height: 500rpx; */
+  background-color: #f2f4f6;
+  margin: 26rpx 0;
+  padding: 26rpx;
+}
+.comment_operate{
+  align-self: right;
+}
+/* 固定评论行 */
+.comment_fixed {
+  position: fixed;
+  height: 98rpx;
+  width: 100%;
+  box-shadow: 0rpx -5rpx 25rpx #bfbfbf;
+  bottom: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 评论输入框 */
+.comment_input {
+  height: 40rpx;
+  width: 600rpx;
+  background-color: #d9d9f3;
+  border-radius: 20rpx;
+}
+/* 评论发布图标按钮 */
+.comment_send {
+  width: 60rpx;
+  height: 60rpx;
+}
+/* 底部占位 */
+#foot_bottom {
+  height: 80rpx;
+}
